@@ -10,13 +10,20 @@
     </head>
 
     <body>
-        <h1>About The Event Stream Application</h1>
+        <h1>Notes</h1>
         <img src="https://d1n8jod2ujwo0y.cloudfront.net/images/core/landing-page/banners/Main-Banner.png" class="img-banner" />
         <p>This is a paragraph.</p>
         <p>Timestamp: <%= Date() %> </p>
         <ul>
             <% for (let index = 0; index < numberOfIterations; index++) { %>
-                <li><%= index %></li>
+                <li id="<%= index %>post">
+                    <p><%= index + ' ' + title %></p>
+                    <% if (!isDeleted) { %>
+                        <% if (isAvailable) { %>
+                            <button type="button">Read Article</button>
+                        <% } %>
+                    <% } %>
+                </li>
             <% } %>
         </ul>
     </body>
