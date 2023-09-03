@@ -3,10 +3,19 @@ body {
     margin: auto;
 }
 
+.container {
+    padding-inline: 25%;
+}
+
 h1 {
     color: #222;
 }
 
 .img-banner {
     width: 50%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
