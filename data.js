@@ -13,7 +13,7 @@ export const notes = [
     },
     {
         id: 3,
-        title: "Sweet beast",
+        title: "Cute Cat",
         contents: "Refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am check cat door for ambush 10 times before coming in. Check cat door for ambush 10 times before coming in. Cats are fats i like to pets them they like to meow back. Tuxedo cats always looking dapper attack feet, for meow meow mama for experiences short bursts of poo-phoria after going to the loo but touch my tail, i shred your hand purrrr walk on a keyboard. Trip owner up in kitchen i want food.",
         created_at: Date.now()
     }

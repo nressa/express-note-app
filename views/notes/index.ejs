@@ -17,7 +17,7 @@
                 <h2> <%= note.title %> </h2>
                 <p><%= note.contents.substring(0, 200) %>...</p>
                 <small><%= new Date(note.created_at) %></small>
-                <a href="">View More</a>
+                <a href="/notes/<%= note.id %>">View More</a>
             </li>
         <% }) %>
         </ul>

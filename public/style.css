@@ -7,10 +7,6 @@ body {
     padding-inline: 25%;
 }
 
-h1 {
-    color: #222;
-}
-
 .img-banner {
     width: 50%;
 }
@@ -18,4 +14,20 @@ h1 {
 ul {
     list-style: none;
     padding: 0;
+}
+
+/**
+** Typography
+**/
+h1 {
+    color: #222;
+}
+
+.text-secondary {
+    color: #555;
+}
+
+a {
+    color: #0000ff;
+    text-decoration: none;
 }
