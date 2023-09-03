@@ -1,4 +1,6 @@
-const express = require('express')
+import { notes } from './data.js';
+import express from 'express';
+
 const app = express()
 
 app.set("view engine", "ejs") // Command express to use EJS for rendering view template
@@ -11,6 +13,12 @@ app.get('/', function(req, res) {
         title: "Lean Express JS"
     }); // This will automatically look at the views folder
 });
+
+app.get('/notes', function(req, res) {
+    res.render("notes/index.ejs", {
+        notes
+    });
+})
 
 app.get('/about', function(req, res) {
     res.sendFile(__dirname + "/public/about.html");
