@@ -5,7 +5,10 @@ app.set("view engine", "ejs") // Command express to use EJS for rendering view t
 
 app.get('/', function(req, res) {
     res.render("index.ejs", {
-        numberOfIterations: 10
+        numberOfIterations: 10,
+        isDeleted: false,
+        isAvailable: true,
+        title: "Lean Express JS"
     }); // This will automatically look at the views folder
 });
 
