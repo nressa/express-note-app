@@ -23,6 +23,13 @@ app.get('/notes', function(req, res) {
 app.get('/notes/:id', function(req, res) {
     const id = +req.params.id
     const note = notes.find(note => note.id === id)
+
+    if (!note) {
+        res.status(404).render("errors/404.ejs")
+
+        return
+    }
+
     res.render("notes/show.ejs", {
         note
     });
