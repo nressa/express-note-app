@@ -1,4 +1,4 @@
-export const notes = [
+const notes = [
     {
         id: 1,
         title: "Walk on a keyboard one of these days i'm going to get that red dot, just you wait and see sniff all the things",
@@ -18,3 +18,11 @@ export const notes = [
         created_at: Date.now()
     }
 ]
+
+export function getNotes() {
+    return notes
+}
+
+export function getNote(id) {
+    return notes.find(note => note.id === id)
+}

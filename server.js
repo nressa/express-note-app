@@ -1,4 +1,4 @@
-import { notes } from './data.js';
+import { getNotes, getNote } from './database.js';
 import express from 'express';
 
 const app = express()
@@ -16,13 +16,13 @@ app.get('/', function(req, res) {
 
 app.get('/notes', function(req, res) {
     res.render("notes/index.ejs", {
-        notes
+        notes : getNotes()
     });
 })
 
 app.get('/notes/:id', function(req, res) {
     const id = +req.params.id
-    const note = notes.find(note => note.id === id)
+    const note = getNote(id)
 
     if (!note) {
         res.status(404).render("errors/404.ejs")
