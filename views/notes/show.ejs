@@ -10,20 +10,15 @@
     </head>
 
     <body class="container">
-        <h1>All Notes</h1>
+        <h1><%= note.title %></h1>
         <span class="text-secondary">
             <a href="/">Home </a> >
-            <a href="/notes">Notes </a>
+            <a href="/notes">Notes </a> >
+            <%= note.title %>
         </span>
-        <ul>
-        <%  notes.forEach(note => { %>
-            <li>
-                <h2> <%= note.title %> </h2>
-                <p><%= note.contents.substring(0, 200) %>...</p>
-                <small><%= new Date(note.created_at) %></small>
-                <a href="/notes/<%= note.id %>">View More</a>
-            </li>
-        <% }) %>
-        </ul>
+        <p>
+            <%= note.contents %>
+        </p>
+        <small><%= new Date(note.created_at) %></small>
     </body>
 </html>

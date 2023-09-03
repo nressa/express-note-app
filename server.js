@@ -20,6 +20,14 @@ app.get('/notes', function(req, res) {
     });
 })
 
+app.get('/notes/:id', function(req, res) {
+    const id = +req.params.id
+    const note = notes.find(note => note.id === id)
+    res.render("notes/show.ejs", {
+        note
+    });
+})
+
 app.get('/about', function(req, res) {
     res.sendFile(__dirname + "/public/about.html");
 });
