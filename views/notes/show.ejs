@@ -11,14 +11,18 @@
 
     <body class="container">
         <h1><%= note.title %></h1>
-        <span class="text-secondary">
-            <a href="/">Home </a> >
-            <a href="/notes">Notes </a> >
-            <a href="#"><%= note.title %></a>
-        </span>
-        <p>
-            <%= note.contents %>
-        </p>
-        <small><%= new Date(note.created_at) %></small>
+        <div class="d-flex">
+            <span class="text-secondary">
+                <a href="/">Home </a> >
+                <a href="#">Notes </a>
+            </span>
+        </div>
+        <form action="/notes/<%= note.id %>/delete" method="POST" class="d-flex">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        <div class="d-block">
+            <p class="w-100"> <%= note.contents %> </p>
+            <p class="w-100"><small><%= new Date(note.created_at) %></small></p>
+        </div>
     </body>
 </html>

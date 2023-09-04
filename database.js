@@ -1,4 +1,4 @@
-const notes = [
+var notes = [
     {
         id: 1,
         title: "Walk on a keyboard one of these days i'm going to get that red dot, just you wait and see sniff all the things",
@@ -33,4 +33,8 @@ export function addNote(note) {
         id: notes.length+1,
         created_at: Date.now()
     })
+}
+
+export function deleteNote(id) {
+    notes = notes.filter(note => note.id !== id);
 }

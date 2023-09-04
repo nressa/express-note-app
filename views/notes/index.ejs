@@ -22,9 +22,10 @@
         </div>
         <ul>
         <%  notes.forEach(note => { %>
+            
             <li>
                 <h2> <%= note.title %> </h2>
-                <p><%= note.contents.substring(0, 200) %>...</p>
+                <% if(note.contents) { %> <p><%= note.contents.substring(0, 200) %>...</p> <%}%>
                 <small><%= new Date(note.created_at) %></small>
                 <a href="/notes/<%= note.id %>">View More</a>
             </li>
