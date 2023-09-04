@@ -11,10 +11,15 @@
 
     <body class="container">
         <h1>All Notes</h1>
-        <span class="text-secondary">
-            <a href="/">Home </a> >
-            <a href="#">Notes </a>
-        </span>
+        <div class="d-flex">
+            <span class="text-secondary">
+                <a href="/">Home </a> >
+                <a href="#">Notes </a>
+            </span>
+        </div>
+        <div class="d-flex">
+            <a href="/notes/create" class="btn">Create Note</a>
+        </div>
         <ul>
         <%  notes.forEach(note => { %>
             <li>

@@ -29,6 +29,9 @@ ul {
 .btn {
     font-size: 16px;
     padding-block: 8px;
+    padding-inline: 5px;
+    border: 1px solid #222;
+    color: #222;
 }
 
 .d-flex {
