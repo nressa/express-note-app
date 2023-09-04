@@ -16,11 +16,22 @@ var notes = [
         title: "Cute Cat",
         contents: "Refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am check cat door for ambush 10 times before coming in. Check cat door for ambush 10 times before coming in. Cats are fats i like to pets them they like to meow back. Tuxedo cats always looking dapper attack feet, for meow meow mama for experiences short bursts of poo-phoria after going to the loo but touch my tail, i shred your hand purrrr walk on a keyboard. Trip owner up in kitchen i want food.",
         created_at: Date.now()
+    }, 
+    {
+        id: 4,
+        title: "Note Application",
+        contents: "Test data. Create a message about creating a Node/Express/ESJ this Sprint 14. Create a notion documentation for the reference and present the application at the technical meeting withis this week. This sould prepare for the upcoming Express JS projects of thea team.",
+        created_at: Date.now()
     }
 ]
 
-export function getNotes() {
-    return notes
+export function getNotes(searchKey) {
+    if (!searchKey) {
+        return notes
+    }
+    
+    const searchKeyToLowerCase = searchKey.toLowerCase()
+    return notes.filter(note => note.title.toLowerCase().includes(searchKeyToLowerCase) || note.contents.toLowerCase().includes(searchKeyToLowerCase))
 }
 
 export function getNote(id) {
