@@ -1,4 +1,4 @@
-import { getNotes, getNote, addNote } from './database.js';
+import { getNotes, getNote, addNote, deleteNote } from './database.js';
 import express from 'express';
 
 const app = express()
@@ -45,14 +45,14 @@ app.get('/notes/:id', function(req, res) {
 })
 
 app.post('/notes', function(req, res) {
-    const body = req.params.id
+    const body = req.body
     addNote(body)
     res.redirect('/notes')
 })
 
 app.post('/notes/:id/delete', function(req, res) {
     const id = +req.params.id
-    addNote(id)
+    deleteNote(id)
     res.redirect('/notes')
 })
 
