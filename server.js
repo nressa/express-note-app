@@ -18,8 +18,10 @@ app.get('/', function(req, res) {
 });
 
 app.get('/notes', function(req, res) {
+    const searchKey = req.query.searchKey
     res.render("notes/index", {
-        notes : getNotes()
+        notes : getNotes(searchKey),
+        searchKey
     });
 })
 
