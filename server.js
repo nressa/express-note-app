@@ -28,7 +28,6 @@ app.get('/notes/:id', function(req, res) {
 
     if (idParam === 'create') {
         res.render("notes/create");
-
         return
     }
 
@@ -37,6 +36,7 @@ app.get('/notes/:id', function(req, res) {
 
     if (!note) {
         res.redirect('/error-404')
+        return
     }
 
     res.render("notes/show", {
@@ -50,18 +50,14 @@ app.post('/notes', function(req, res) {
     res.redirect('/notes')
 })
 
-app.get('/about', function(req, res) {
-    res.sendFile(__dirname + "/public/about.html");
-});
-
 app.use(express.static("public"))
 
 app.get('*', function(req, res){
-    res.render(error404);
+    res.status(404).render(error404);
 });
 
 app.get('/error-404', function(req, res){
-    res.render(error404);
+    res.status(404).render(error404);
 });
 
 const port = 8080
