@@ -1,3 +1,5 @@
+![image](https://github.com/nressa/express-note-app/assets/33377521/4b5200db-5d00-4fde-9cda-f92f33589e83)
+
 # Note Application
 
 A note application that is created using Node JS, Express JS, and EJS.
