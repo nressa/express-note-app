@@ -1,6 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
+    font-size: 14px;
 }
 
 .container {
@@ -16,6 +17,40 @@ ul {
     padding: 0;
 }
 
+.form {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border: solid 1px #333;
+    border-radius: 4px;
+    font-size: 16px;
+    min-width: 250px;
+}
+
+.btn {
+    font-size: 16px;
+    padding-block: 8px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+label {
+    padding-block: 5px;
+}
+
+.my-2 {
+    margin-block: 2rem;
+}
+
 /**
 ** Typography
 **/
@@ -29,6 +64,10 @@ h1 {
 
 .text-center {
     text-align: center;
+}
+
+.font-bold {
+    font-weight: bold;
 }
 
 a {
