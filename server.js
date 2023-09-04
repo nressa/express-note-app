@@ -47,7 +47,7 @@ app.get('/notes/:id', function(req, res) {
 app.post('/notes', function(req, res) {
     const body = req.body
     addNote(body)
-    res.send(body)
+    res.redirect('/notes')
 })
 
 app.get('/about', function(req, res) {
