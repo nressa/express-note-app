@@ -45,8 +45,14 @@ app.get('/notes/:id', function(req, res) {
 })
 
 app.post('/notes', function(req, res) {
-    const body = req.body
+    const body = req.params.id
     addNote(body)
+    res.redirect('/notes')
+})
+
+app.post('/notes/:id/delete', function(req, res) {
+    const id = +req.params.id
+    addNote(id)
     res.redirect('/notes')
 })
 

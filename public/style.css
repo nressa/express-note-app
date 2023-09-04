@@ -28,10 +28,17 @@ ul {
 
 .btn {
     font-size: 16px;
-    padding-block: 8px;
-    padding-inline: 5px;
+    padding: 5px;
     border: 1px solid #222;
     color: #222;
+    border-radius: 4px;
+    background-color: #7fff7f;
+    color: #222;
+}
+
+.btn-danger {
+    background-color: #DC3545;
+    color: #fff;
 }
 
 .d-flex {

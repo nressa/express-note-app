@@ -34,3 +34,7 @@ export function addNote(note) {
         created_at: Date.now()
     })
 }
+
+export function deleteNote(id) {
+    notes = notes.filter(note => note.id !== id);
+}
